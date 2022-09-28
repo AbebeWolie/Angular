@@ -1,23 +1,93 @@
-<div class="row">
-    <div class="col-xs-12">
-        <form>
-            <div class="row">
-                <div class="col-sm-5 form-group">
-                    <label for="name" class="form-lable">Name</label>
-                    <input type="text" id="name" class="form-control">
-                </div>
-                <div class="col-sm-2 form-group">
-                    <label for="amount" class="form-lable">Amount</label>
-                    <input type="number" id="amount" class="form-control">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xs-12">
-                    <button class="btn btn-success" type="submit">Add</button>
-                    <button class="btn btn-danger" type="button">Delete</button>
-                    <button class="btn btn-primary" type="button">Clear</button>
-                </div>
-            </div>
-        </form>
+
+    <!-- <div class="col-md-8 mt-4 mb-4">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Amount</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of listData ">
+                    <td><span> {{item.name}}</span></td>
+                    <td><span> {{item.amount}}</span></td>
+                </tr>
+            </tbody>
+        </table>
     </div>
+</div> -->
+
+<!-- <div class="card">
+   <form>
+    <div class="mt-5 box">
+        <div class="form-row">
+            <div class="col-md-12">
+                <div class="form-group mt-4">
+                    <label>Name</label>
+                </div>
+                <div class="for-row" style="margin-top: -10px;">
+                    <div class="col">
+                        <input type="text" name="name" class="form-control" placeholder="name">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="form-group mt-4">
+                    <label>Amount</label>
+                </div>
+                <div class="for-row" style="margin-top: -10px;">
+                    <div class="col">
+                        <input type="text" name="amount" class="form-control" placeholder="amount">
+                    </div>
+                </div>
+            </div>
+            <div class="form-row mt-4 d-flex">
+                <div class="col-md-6">
+                    <button class="btn btn-primary">Add</button>
+                </div>
+                <div class="col-md-6">
+                    <button class="btn btn-primary">Reset</button>
+                </div>
+            </div>
+        </div>
+    </div>
+   </form>
+   <div class="col-md-8 mt-4 mb-4">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Amount</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of listData ">
+                <td><span> {{item.name}}</span></td>
+                <td><span> {{item.amount}}</span></td>
+            </tr>
+        </tbody>
+    </table>
 </div>
+</div> -->
+
+<!-- <form (ngSubmit)="onsubmit()">
+    <div class="container">
+        <div class="row" *ngFor="let obj of dataArray; let i=index">
+            <div class="form-group col-sm-5">
+                <label>Name</label>
+                <input type="text" class="form-control" name="name{{i}} " [(ngModel)]="home.name">
+            </div>
+            <div class="form-group col-sm-2">
+                <label>Amount</label>
+                <input type="text" class="form-control" name="amount{{i}} " [(ngModel)]="home.amount">
+            </div>
+            <div class="form-group col-sm-2">
+               <span (click)="remove(i)" class="btn btn-danger float-md-start">-</span>
+            </div>
+        </div>
+        <span (click)="addform()" class="btn btn-success">+</span>
+        <button class="btn btn-primary">submit</button>
+    </div>
+</form> -->
+
+

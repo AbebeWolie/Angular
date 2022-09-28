@@ -7,21 +7,9 @@
     <hr>
     <div class="row ">
         <div class="col-xs-12">
-            <a  href="#" class="list-group-item clearfix d-flex justify-content-between border-2 my-2" Style="border: solid 1px rgb(225, 218, 218);" *ngFor="let recipe of recipes ">
-                <div class="container p-2 bg-light ">
-                    <div class="pull-left" >
-                        <h4 class="list-group-item-heading">{{ recipe.name}}</h4>
-                        <p class="list-group-item-text">{{ recipe.description}} </p>
-                     </div>
-                    <span class="pull-right">
-                        <img
-                         [src]="recipe.imagepath"
-                         alt="{{recipe.name}} " 
-                         class="img-responsive w-100" style="max-height:50px;">
-                    </span>
-                </div>
-            </a>
-           <app-recipe-item></app-recipe-item>
+           <app-recipe-item  *ngFor="let recipeEl of recipes"
+           [recipe]="recipeEl"
+           [recipeSelected]="onRecipeSelected(recipeEl)"></app-recipe-item>
         </div> 
     </div>
 
