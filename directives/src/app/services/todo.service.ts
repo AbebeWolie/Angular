@@ -11,13 +11,17 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class TodoService {
-  todourl:string='https://jsonplaceholder.typicode.com/todos'
-  todoLimit='?_limit=10'
+  todourl:string='../modules/abe.json'
+
   constructor(private htttp:HttpClient) { }
 
 getTodos():Observable<Todo[]>{
- return this.htttp.get<Todo[]>(`${this.todourl}${this.todoLimit}`);
+ return this.htttp.get<Todo[]>(this.todourl);
 
+}
+
+getData(){
+  return ['abe','wole','yeshalem']
 }
 
 deleteTodo(todo:Todo):Observable<Todo>{

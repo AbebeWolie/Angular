@@ -1,0 +1,25 @@
+<div class="container mt-5">
+    <h4 class="text-center mb-5">Form handlliing using reactive form approach Practicing assignment</h4>
+    <form [formGroup]="practiceForm">
+        <div class="form-group">
+            <label class="form-label">Project Name</label>
+            <input type="text" class="form-control" formControlName="name">
+            <span class="help-block" *ngIf="!practiceForm.get('name').valid && practiceForm.get('name').touched">Please fill then Project Name</span>
+        </div>
+        <div class="form-group">
+            <label class="form-label">Email</label>
+            <input type="email" class="form-control" formControlName="email">
+            <span class="help-block" *ngIf="!practiceForm.get('email').valid && practiceForm.get('email').touched ">Please fill Approprate Email</span>
+        </div>
+        <div class="form-group">
+            <h4>Your Status</h4>
+           <select class="form-select" formControlName="status">
+            <option selected>choice the status</option>
+                <option value="stable">Stable</option>
+                <option value="critical">Critical</option>
+                <option value="finshed">Fisned</option>
+           </select>
+        </div>
+        <button class="btn btn-primary mt-3" type="submit" [disabled]="!practiceForm.valid">Submit</button>
+    </form>
+</div>

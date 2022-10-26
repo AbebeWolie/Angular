@@ -1,0 +1,5 @@
+ <app-main></app-main>
+<div class="container">
+  <app-navigation (postCreated)="onPostAdded($event)"></app-navigation>
+  <app-menu [posts]="storedPosts"></app-menu>
+</div>

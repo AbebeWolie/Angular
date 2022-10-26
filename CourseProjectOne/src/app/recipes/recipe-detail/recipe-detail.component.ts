@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./recipe-detail.component.css']
 })
 export class RecipeDetailComponent implements OnInit {
+  hi=true
+  hid=false
  @Input() display=new EventEmitter<string>();
  @Input() recipe:Recipe
 
@@ -18,4 +20,12 @@ export class RecipeDetailComponent implements OnInit {
   classcheng(){
 
   }
+
+  clicked(){
+    this.hi = !this.hi
+    this.hid = !this.hid
+    console.log('clicked')
+  }
+
+
 }

@@ -8,6 +8,7 @@ import { TodoService } from 'src/app/services/todo.service';
 })
 export class TodoComponent implements OnInit {
   todos:Todo[];
+  data=[]
   constructor(private services:TodoService) {
 
    }
@@ -17,6 +18,11 @@ export class TodoComponent implements OnInit {
     this.todos=todos;
    });
 
+}
+
+getd(){
+  this.data =this.services.getData()
+  console.log(this.data)
 }
 
 deleteTodo(todo:Todo){

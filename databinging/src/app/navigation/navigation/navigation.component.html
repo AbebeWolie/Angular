@@ -1,0 +1,13 @@
+<div class="container mt-5">
+   <form #rest="ngForm">
+      <div class="form-group">
+         <label class="form-label">Name</label>
+         <input name="name" type="text" class="form-control" [(ngModel)]="name">
+      </div>
+      <div class="form-group">
+         <label class="form-label">Amount</label>
+         <input name="amount" type="text" class="form-control" [(ngModel)]="amount">
+      </div>
+      <button class="btn btn-success" (click)="onAddPost()">Save Post</button>
+   </form>
+</div>

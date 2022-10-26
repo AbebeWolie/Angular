@@ -1,0 +1,35 @@
+     
+    <div class="container">
+        <h3 class="text-center">Template Deriven Form</h3>
+    <form (ngSubmit)="onSubmit()" #form = ngForm>
+        <div class="form-group">
+            <label class="form-lable">Name</label>
+            <input type="text" name="name" id="userName" class="form-control" [(ngModel)]="name" required #namee="ngModel">
+            <div class="help-block" *ngIf="!namee.valid && namee.touched">Pleace fill the Form</div>
+        </div>
+        
+        <div class="form-group" class="mt-2">
+            <label class="form-lable">Email</label>
+            <input type="email" name="email" class="form-control" [(ngModel)]="email" required email #emaill="ngModel">
+            <span *ngIf="!emaill.valid && emaill.touched">Pleace Fill The Valid Form</span>
+        </div>
+
+        <div class="radio" *ngFor="let gender of gender">
+            <input type="radio"
+            [value]="gender"
+            name="gender"
+            ngModel>
+            {{gender}}
+        </div>
+
+        <button class="btn btn-primary mt-2"[disabled]="!form.valid">Submit</button>
+    </form>
+</div>
+
+
+
+
+
+
+
+

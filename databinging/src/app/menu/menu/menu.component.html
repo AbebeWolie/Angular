@@ -1,0 +1,14 @@
+<div class="container" *ngIf="posts.length > 0;else defaulttext">
+    <table class=" table table-striped">
+        <th>Name</th>
+        <th>Amount</th>
+       
+        <tr *ngFor="let post of posts">
+            <td>{{post.name}} </td>
+            <td>{{post.amount}} </td>
+        </tr>
+    </table>
+</div>
+<ng-template #defaulttext>
+    <p class="text-center">There Is No post here</p>
+</ng-template>
