@@ -1,0 +1,17 @@
+<div class="container">
+    <form #f="ngForm" (ngSubmit)="onSubmit()" style="width:300px;margin: 20px 0px;">
+        <div class="formgroup">
+            <label>Name</label>
+            <input class="form-control" type="text" name="name" [(ngModel)]="name" required>
+        </div>
+        <div class="formgroup">
+            <label>Email</label>
+            <input class="form-control" type="email" name="email" [(ngModel)]="email" required email>
+        </div>
+        <div class="formgroup">
+            <label>PassWord</label>
+            <input class="form-control" type="password" name="password" [(ngModel)]="password" required password>
+        </div>
+        <button style="color: black;font-size: 20px; margin: 20px 0px;" class="btn btn-white" type="onSubmit()">Register</button>
+    </form>
+</div>

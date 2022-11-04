@@ -1,12 +1,25 @@
-
 <!-- 
-<input type="text" [(ngModel)]="title">
-<p>{{ title }} </p> -->
+<div class="container">
+    <form #form="ngForm" (ngSubmit)="onCreatePost()">
+        <div class="form-group">
+            <label>Title</label>
+            <input type="text" class="form-control" name="title" [(ngModel)]="title" #name="ngModel" required>
+        </div>
+        <div class="form-group">
+            <label>Comtent</label>
+            <input type="text" class="form-control" name="content" [(ngModel)]="content" #email="ngModel" required>
+        </div>
 
-<div class="container bg-success">
-    <h1>what is up guys i have commepleted my bootstrap installation</h1>
-    <app-server></app-server>
-    <app-servers></app-servers>
+        <button class="btn btn-primary" type="submit" [disabled]="!form.valid">Save Post</button>
+    </form>
+    <button class="btn btn-danger" (click)="Feche()">Fetche Data</button>
 </div>
-<hr>
+ -->
 
+ <div class="container mt-5">
+    <app-servers></app-servers>
+    <app-server></app-server>
+ 
+ </div>
+
+ 

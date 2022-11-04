@@ -1,4 +1,7 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { UserDetail } from './../UsserDetail';
+import { Component, EventEmitter, OnInit, Output, ViewChild } from '@angular/core';
+import { FormControl, FormGroup, NgForm, Validators } from '@angular/forms';
+
 
 @Component({
   selector: 'app-navigation',
@@ -6,24 +9,34 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
   styleUrls: ['./navigation.component.css']
 })
 export class NavigationComponent implements OnInit {
- name = '';
- amount = '';
-  @Output() postCreated = new EventEmitter();
+  name:string = '';
+  designation:string = '';
+  country:string = '';
+  city:string = '';
+  userdetail:UserDetail[]=[]
 
- onAddPost(){
-  const post = {
-    name:this.name,
-    amount:this.amount
-  };
-  this.postCreated.emit(post)
- }
+  form:FormGroup
 
- onRestPost(){
-  
- }
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit(){
+    this.form = new FormGroup({
+      "user":new FormGroup({
+        "name":new FormControl(null,Validators.required),
+        "design":new FormControl(null,Validators.required)
+      }),
+
+      "address":new FormGroup({
+        "country":new FormControl(null,Validators.required),
+        "city":new FormControl(null,Validators.required)
+      })
+    })
+  }
+
+  onSubmit(){
+    console.log(this.form)
+    this.userdetail.push(new UserDetail(this.name,this.designation,this.country,this.city))
+    this.form.reset()
   }
 
 }

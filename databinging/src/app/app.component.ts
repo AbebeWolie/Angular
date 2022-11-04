@@ -9,7 +9,6 @@ storedPosts = [];
 
 onPostAdded(post){
   this.storedPosts.push(post)
-  console.log('post Added')
 }
 
 }

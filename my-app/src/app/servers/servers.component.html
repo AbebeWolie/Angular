@@ -1,1 +1,17 @@
-<h4>hello this is from servers component</h4>
+
+<div class="container">
+    <form #form="ngForm" (ngSubmit)="onCreatePost(form.value)" style="width:400px;margin: 20px 0px;">
+        <div class="form-group">
+            <label>Title</label>
+            <input type="text" class="form-control" name="title" [(ngModel)]="title" #name="ngModel" required>
+        </div>
+        <div class="form-group">
+            <label>Comtent</label>
+            <input type="text" class="form-control" name="content" [(ngModel)]="content" #email="ngModel" required>
+        </div>
+
+        <button class="btn btn-primary" type="submit" [disabled]="!form.valid">Save Post</button>
+    </form>
+    <!-- <button class="btn btn-danger" (click)="Feche()">Fetche Data</button> -->
+</div>
+

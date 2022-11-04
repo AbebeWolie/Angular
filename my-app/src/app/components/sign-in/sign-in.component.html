@@ -1,0 +1,54 @@
+<div class="displayTable">
+    <div class="displayTableCell">
+      <div class="authBlock">
+        <h3>Log In</h3>
+        <form #form="ngForm" (ngSubmit)="onSubmit(form.value)">
+            <div class="formGroup">
+                <input
+                  type="email"
+                  name="email"
+                  class="form-control"
+                  placeholder="Email Address"
+                  required
+                />
+              </div>
+              <div class="formGroup">
+                <input
+                  type="password"
+                  class="form-control"
+                  placeholder="Password"
+                  name="password"
+                  required
+                />
+              </div>
+              <div class="formGroup">
+                <input
+                  type="submit"
+                  class="btn btn-primary"
+                  value="LogIn"
+                  (click)="onSubmit(form.value)"
+                />
+              </div>
+        </form>
+        <div class="formGroup">
+          <span class="or"><span class="orInner">Or</span></span>
+        </div>
+        <!-- Continue with Google -->
+        <div class="formGroup">
+          <button
+            type="button"
+            class="btn googleBtn"
+          >
+            <i class="fab fa-google-plus-g"></i>
+            Continue with Google
+          </button>
+        </div>
+      </div>
+      <div class="redirectToLogin">
+        <span
+          >Register?
+          <a class="redirect text-primary text-decoration-none" routerLink="/register-user">Sign Up</a></span
+        >
+      </div>
+    </div>
+  </div>
